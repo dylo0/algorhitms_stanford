@@ -49,12 +49,12 @@ def qshelper(arr, left, right, pivotfun):
     partB = qshelper(sorted[0], sorted[1], right, pivotfun)
     return sorted[0]
 
-def quicksort(arr, pivotfun):
+def quicksort(arr, pivotfun = choose_pivot3):
     global comparations
     comparations = 0
     return (qshelper(arr, 0, len(arr), pivotfun), comparations)
 
-if name == __main__:
+if __name__ == "__main__":
     # checks    
     print checkfile("10.txt", choose_pivot1) #25
     print checkfile("10.txt", choose_pivot2) #29
